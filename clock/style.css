@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.heading{
+    position: relative;
+    color: white;
+}
+
+.clock{
+    width: 450px;
+    height: 450px;
+    background-image: url(./clock.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+.clock .hour, .clock .minuse, .clock .second{
+    position: absolute;
+}
+
+.clock .hour, .hr{
+    width: 160px;
+    height: 160px;
+}
+
+.clock .minuse, .min{
+    width: 190px;
+    height: 190px;
+}
+
+.clock .second, .sec{
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .min, .sec{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.hr::before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 75px;
+    background: #FFCEFE;
+    border-radius: 6px 6px 0 0;
+    z-index: 10;
+}
+
+.min::before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    background: #D9ACF5;
+    border-radius: 6px 6px 0 0;
+    z-index: 11;
+}
+
+.sec::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #AAE3E2;
+    border-radius: 6px 6px 0 0;
+    z-index: 12;
+}
